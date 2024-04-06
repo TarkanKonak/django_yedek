@@ -1,135 +1,171 @@
-{% extends 'layout.html' %}
 {% load static %}
+<!DOCTYPE html>
 
-{% block banner_area %}
-    <section class="banner_area">
-            <div class="box_1620">
-				<div class="banner_inner d-flex align-items-center">
-					<div class="container">
-						<div class="banner_content text-center">
-							<h2>Contact Us</h2>
-							<div class="page_link">
-								<a href="{% url 'index' %}">Home</a>
-								<a href="{% url 'contact' %}">Contact Us</a>
-							</div>
-						</div>
-					</div>
-				</div>
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Kross - Creative Portfolio Template</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Creative Portfolio Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Themefisher">
+    <meta name="generator" content="Themefisher Kross Template v1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<header class="navigation fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.png" alt="Myself"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="text-white font-tertiary">Contacts</h1>
             </div>
-        </section>
+        </div>
+    </div>
+    <!-- background shapes -->
+    <img src="images/illustrations/page-title.png" alt="illustrations" class="bg-shape-1 w-100">
+    <img src="images/illustrations/leaf-pink-round.png" alt="illustrations" class="bg-shape-2">
+    <img src="images/illustrations/dots-cyan.png" alt="illustrations" class="bg-shape-3">
+    <img src="images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-4">
+    <img src="images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-5">
+    <img src="images/illustrations/dots-group-cyan.png" alt="illustrations" class="bg-shape-6">
+    <img src="images/illustrations/leaf-cyan-lg.png" alt="illustrations" class="bg-shape-7">
+</section>
+<!-- /page title -->
 
-{% endblock %}
-
-{% block content %}
-    <!--================Contact Area =================-->
-    <section class="contact_area p_120">
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="contact_info">
-                        <div class="info_item">
-                            <i class="lnr lnr-home"></i>
-                            <h6>California, United States</h6>
-                            <p>Santa monica bullevard</p>
-                        </div>
-                        <div class="info_item">
-                            <i class="lnr lnr-phone-handset"></i>
-                            <h6><a href="#">00 (440) 9865 562</a></h6>
-                            <p>Mon to Fri 9am to 6 pm</p>
-                        </div>
-                        <div class="info_item">
-                            <i class="lnr lnr-envelope"></i>
-                            <h6><a href="#">support@colorlib.com</a></h6>
-                            <p>Send us your query anytime!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <form class="row contact_form" action="{% url 'contact_form' %}" method="post" id="contactForm" 
-                          novalidate="novalidate">
-                        
-                        {% csrf_token %}
-                        
+<!-- contact -->
+<section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-title">Contact Info</h2>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <div class="bg-white rounded text-center p-5 shadow-down">
+                    <h4 class="mb-80">Contact Form</h4>
+                    <form action="#" class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name"
-                                       placeholder="Enter your name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email"
-                                       placeholder="Enter email address">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="subject" name="subject"
-                                       placeholder="Enter Subject">
-                            </div>
+                            <input type="text" id="name" name="name" placeholder="Full Name"
+                                   class="form-control px-0 mb-4" required>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                            <textarea class="form-control" name="message" id="message" rows="1"
-                                      placeholder="Enter Message"></textarea>
-                            </div>
+                            <input type="email" id="email" name="email" placeholder="Email Address"
+                                   class="form-control px-0 mb-4" required>
                         </div>
-                        <div class="col-md-12 text-right">
-                            <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                        <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                        placeholder="Type Message Here" required></textarea>
+                        </div>
+                        <div class="col-lg-6 col-10 mx-auto">
+                            <button class="btn btn-primary w-100">send</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
-    <!--================Contact Area =================-->
+    </div>
+</section>
+<!-- /contact -->
 
-
-    <!--================Contact Success and Error message Area =================-->
-    <div id="success" class="modal modal-message fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-close"></i>
-                    </button>
-                    <h2>Thank you</h2>
-                    <p>Your message is successfully sent...</p>
+<!-- footer -->
+<footer class="bg-dark footer-section">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-light">Email</h5>
+                    <p class="text-white paragraph-lg font-secondary">steve.fruits@email.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-light">Phone</h5>
+                    <p class="text-white paragraph-lg font-secondary">+880 2544 658 256</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-light">Address</h5>
+                    <p class="text-white paragraph-lg font-secondary">125/A, CA Commercial Area, California, USA</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Modals error -->
-
-    <div id="error" class="modal modal-message fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-close"></i>
-                    </button>
-                    <h2>Sorry !</h2>
-                    <p> Something went wrong </p>
-                </div>
-            </div>
-        </div>
+    <div class="border-top text-center border-dark py-5">
+        <p class="mb-0 text-light">Copyright &copy;<script>
+            var CurrentYear = new Date().getFullYear()
+            document.write(CurrentYear)
+        </script>
+            Designed &amp; Developed by <a class="text-white-50" href="Themefisher">Themefisher</a></p>
     </div>
-    <!--================End Contact Success and Error message Area =================-->
+</footer>
+<!-- /footer -->
 
-{% endblock %}
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- filter -->
+<script src="plugins/shuffle/shuffle.min.js"></script>
 
+<!-- Main Script -->
+<script src="js/script.js"></script>
 
-
-
-
-
-
-{% block extra_scripts %}
-
-    <!-- contact js -->
-    <script src="{% static 'js/jquery.form.js' %}"></script>
-    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
-    <script src="{% static 'js/contact.js' %}"></script>
-    <!--gmaps Js-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="{% static 'js/gmaps.min.js' %}"></script>
-
-{% endblock %}
+</body>
+</html>
