@@ -11,5 +11,5 @@ def contact_form(request):
     return JsonResponse(context)
 
 def contact(request):
-    return render(request, 'contact.html')
+    return render(request, '../../myProject/templates/contact.html')
 
